@@ -10,6 +10,7 @@
         <Company>Hauseux Technologies</Company>
         <PackageDescription>Messaging package for .NET Api</PackageDescription>
         <PackageReadmeFile>README.md</PackageReadmeFile>
+        <RepositoryUrl>https://github.com/hauseux-technologies/dotnet-messaging</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
