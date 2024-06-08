@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace HT.Messaging;
+namespace LH.Messaging;
 
 public interface IIntegrationEvent : INotification
 {

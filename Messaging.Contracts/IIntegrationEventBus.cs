@@ -1,6 +1,6 @@
-﻿namespace HT.Messaging;
+﻿namespace LH.Messaging;
 
 public interface IIntegrationEventBus
 {
-    void Publish(IIntegrationEvent integrationEvent);
+    Task PublishAsync(IIntegrationEvent integrationEvent);
 }
