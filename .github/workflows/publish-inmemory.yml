@@ -1,4 +1,4 @@
-name: Publish
+name: Publish InMemory
 
 on: workflow_dispatch
 
@@ -35,21 +35,21 @@ jobs:
                   dotnet nuget add source --username ${{ secrets.NUGET_USERNAME }} --password ${{ secrets.NUGET_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
 
             - name: Publish
-              run: dotnet nuget push ./Messaging.Contracts/bin/Release/*.nupkg --api-key ${{ secrets.NUGET_TOKEN }} --source "github"
+              run: dotnet nuget push ./Messaging.InMemory/bin/Release/*.nupkg --api-key ${{ secrets.NUGET_TOKEN }} --source "github"
 
-            - name: Bump Messaging.Contracts version
+            - name: Bump Messaging.InMemory version
               uses: KageKirin/bump-csproj-version@v0
-              id: messaging_contracts_bump_version
+              id: messaging_in_memory_bump_version
               with:
-                  file: Messaging.Contracts/Messaging.Contracts.csproj
+                  file: Messaging.InMemory/Messaging.InMemory.csproj
                   patch: true
 
             - name: Commit version
               run: |
                   git config --local user.email github-actions
                   git config --local user.name github-actions 
-                  echo "Bump version of Messaging.Contracts to ${{ steps.messaging_contracts_bump_version.outputs.version }}"
-                  git add Messaging.Contracts/Messaging.Contracts.csproj
-                  git commit -m "Bump version of Messaging.Contracts to ${{ steps.messaging_contracts_bump_version.outputs.version }}"
+                  echo "Bump version of Messaging.InMemory to ${{ steps.messaging_in_memory_bump_version.outputs.version }}"
+                  git add Messaging.InMemory/Messaging.InMemory.csproj
+                  git commit -m "Bump version of Messaging.InMemory to ${{ steps.messaging_in_memory_bump_version.outputs.version }}"
                   echo "Push version changes"
                   git push
