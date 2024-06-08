@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging.Contracts", "Messaging.Contracts\Messaging.Contracts.csproj", "{F63B1365-9283-4660-AAB2-A671BFA43BE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging.InMemory", "Messaging.InMemory\Messaging.InMemory.csproj", "{70155B9B-4B5E-44C5-8EC6-F037881E320A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{F63B1365-9283-4660-AAB2-A671BFA43BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F63B1365-9283-4660-AAB2-A671BFA43BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F63B1365-9283-4660-AAB2-A671BFA43BE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70155B9B-4B5E-44C5-8EC6-F037881E320A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70155B9B-4B5E-44C5-8EC6-F037881E320A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70155B9B-4B5E-44C5-8EC6-F037881E320A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70155B9B-4B5E-44C5-8EC6-F037881E320A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
